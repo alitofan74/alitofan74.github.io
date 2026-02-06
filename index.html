@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – M. Ali Tofan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: all .7s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+  </style>
+<style>
+  html { scroll-behavior: smooth; }
+  .section { min-height: 99vh; padding-top: 6rem; padding-bottom: 6rem; }
+</style>
+<style>
+  #menuBtn .line {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    background: #111;
+    border-radius: 9999px;
+    transition: all 300ms ease;
+  }
+
+  #menuBtn .line-1 { top: 8px; }
+  #menuBtn .line-2 { top: 15px; }
+  #menuBtn .line-3 { top: 22px; }
+
+  #menuBtn.active .line-1 {
+    transform: rotate(45deg);
+    top: 15px;
+  }
+
+  #menuBtn.active .line-2 {
+    opacity: 0;
+  }
+
+  #menuBtn.active .line-3 {
+    transform: rotate(-45deg);
+    top: 15px;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<!-- Navbar -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="font-semibold tracking-tight font-[Inter]">MUHAMMAD ALI TOFAN</span>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex gap-6 text-sm transition-colors duration-300">
+      <a href="#hero" class="hover:text-blue-600">Home</a>
+      <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+      <a href="#skills" class="hover:text-blue-600">Skills</a>
+      <a href="#repos" class="hover:text-blue-600">GitHub Repos</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="menuBtn" class="md:hidden relative w-8 h-8 focus:outline-none">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 border-t">
+    <nav class="flex flex-col gap-4 px-4 py-4 text-sm">
+      <a href="#hero" class="mobile-link hover:text-blue-600">Home</a>
+      <a href="#portfolio" class="mobile-link hover:text-blue-600">Portfolio</a>
+      <a href="#skills" class="mobile-link hover:text-blue-600">Skills</a>
+      <a href="#repos" class="mobile-link hover:text-blue-600">GitHub Repos</a>
+      <a href="#contact" class="mobile-link hover:text-blue-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero -->
+<section id="hero" class="section bg-slate-100 pt-24 md:pt-52">
+<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center reveal">
+    <div class="mb-10">
+      <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded-full border border-slate-200 bg-white/70 backdrop-blur">Full‑stack Web Developer</span>
+      <h1 class="mt-4 text-3xl md:text-4xl font-bold leading-tight">Building reliable web products with clean, maintainable code.</h1>
+      <p class="mt-4 text-slate-600 max-w-xl">
+          I’m a full‑stack developer focused on web applications—shipping pragmatic solutions, collaborating well with teams,
+          and balancing performance, clarity, and long‑term maintainability.
+      </p>
+      <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="#portfolio" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/90 text-white hover:bg-slate-900 transition">
+          View selected work
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200/70 bg-white/60 backdrop-blur hover:bg-white transition">
+          Get in touch
+          </a>
+      </div>
+    </div>
+    <div class="flex justify-center md:justify-end">
+      <!-- Replace this div with your image later -->
+      <div class="relative inline-block">
+        <!-- Blob abstract di belakang -->
+        <div
+          class="absolute -z-10 -top-8 -left-8 w-72 h-72 md:w-80 md:h-80
+                bg-[#8BA3C3] opacity-90
+                rounded-[45%_55%_60%_40%/55%_45%_55%_45%]">
+        </div>
+
+        <!-- Frame foto (lebih besar & proporsional) -->
+        <div class="w-64 h-64 md:w-80 md:h-80 overflow-hidden ">
+          <img
+            src="assets/img/tofan.png"
+            alt="Tofan"
+            class="w-full max-w-64 h-full object-cover object-center"
+          />
+        </div>
+      </div>
+
+    </div>
+</div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="section bg-white">
+<div class="max-w-7xl mx-auto px-4 reveal">
+  <h2 class="text-2xl font-semibold mb-8">Portfolio</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="group rounded-2xl overflow-hidden bg-slate-100 shadow hover:shadow-xl transition">
+        <img src="assets/img/porto-charity.PNG" class="h-55 w-full bg-slate-200 flex items-center justify-center text-slate-500"></img>
+        <div class="p-4">
+          <h3 class="font-semibold">Charity & Donation Platform</h3>
+          <p class="text-sm text-slate-600">
+            Secure donation flow with Midtrans integration, real-time transaction tracking, and admin reporting.
+          </p>
+        </div>
+    </div>
+    <div class="group rounded-2xl overflow-hidden bg-slate-100 shadow hover:shadow-xl transition">
+        <img src="assets/img/porto-ecommerce.PNG" class="h-60 w-full bg-slate-200 flex items-center justify-center text-slate-500"></img>
+        <div class="p-4">
+          <h3 class="font-semibold">E-commerce Platform</h3>
+          <p class="text-sm text-slate-600">
+            Scalable product catalog, shopping cart, and checkout system with payment gateway integration.
+          </p>
+        </div>
+    </div>
+    <div class="group rounded-2xl overflow-hidden bg-slate-100 shadow hover:shadow-xl transition">
+        <img src="assets/img/porto-siakad.PNG" class="h-55 w-full bg-slate-200 flex items-center justify-center text-slate-500"></img>
+        <div class="p-4">
+          <h3 class="font-semibold">Academic Management System (SIAKAD)</h3>
+          <p class="text-sm text-slate-600">
+            Student, course, and academic record management with role-based access and dashboard insights.
+          </p>
+        </div>
+    </div>
+  </div>
+  <div class="grid mt-10 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="group rounded-2xl overflow-hidden bg-slate-100 shadow hover:shadow-xl transition">
+        <img src="assets/img/porto-job.PNG" class="h-55 w-full bg-slate-200 flex items-center justify-center text-slate-500"></img>
+        <div class="p-4">
+          <h3 class="font-semibold">Job Portal & Recruitment Platform</h3>
+          <p class="text-sm text-slate-600">
+            Job listing management, applicant tracking, and employer dashboard with streamlined workflows.
+          </p>
+        </div>
+    </div>
+    <div class="group rounded-2xl overflow-hidden bg-slate-100 shadow hover:shadow-xl transition">
+        <img src="assets/img/porto-company.PNG" class="h-62 w-full bg-slate-200 flex items-center justify-center text-slate-500"></img>
+        <div class="p-4">
+          <h3 class="font-semibold">Corporate Company Profile</h3>
+          <p class="text-sm text-slate-600">
+            Professional company profile website with service showcase and responsive layout.
+          </p>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section bg-slate-100">
+<div class="max-w-7xl mx-auto px-4 reveal">
+  <h2 class="text-2xl font-semibold mb-2">Skills</h2>
+  <p class="text-slate-600 mb-8 max-w-2xl">
+  Tools I work with regularly. The focus is on practical delivery and maintainable solutions—no hype, just what I use to ship.
+  </p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+        <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-500">
+          <!-- Laravel Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-4 4-8 4-8z"/>
+            <path d="M8 14a4 4 0 0 0 8 0"/>
+          </svg>
+
+        </div>
+        <div>
+            <div class="font-medium">Laravel</div>
+            <div class="text-xs text-slate-500">Primary backend framework</div>
+        </div>
+        </div>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• production use</span>
+        </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+        <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-500">
+          <!-- Symfony Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 3a3 3 0 1 0 6 0"/>
+            <path d="M21 9a3 3 0 1 0 0 6"/>
+            <path d="M15 21a3 3 0 1 0-6 0"/>
+            <path d="M3 15a3 3 0 1 0 0-6"/>
+            <path d="M9 5v2a2 2 0 0 1-2 2H5"/>
+            <path d="M19 9h-2a2 2 0 0 1-2-2V5"/>
+            <path d="M15 19v-2a2 2 0 0 1 2-2h2"/>
+            <path d="M5 15h2a2 2 0 0 1 2 2v2"/>
+          </svg>
+        </div>
+        <div>
+            <div class="font-medium">Symfony</div>
+            <div class="text-xs text-slate-500">Service-oriented projects</div>
+        </div>
+        </div>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• APIs & refactors</span>
+        </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+        <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-500">
+          <!-- jQuery Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h7l-1 8 12-14h-7l1-6z"/>
+          </svg>
+
+        </div>
+        <div>
+            <div class="font-medium">jQuery</div>
+            <div class="text-xs text-slate-500">Legacy UI enhancements</div>
+        </div>
+        </div>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• incremental improvements</span>
+        </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+        <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-500">
+          <!-- Tailwind CSS Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h10a3 3 0 1 0 0-6"/>
+            <path d="M3 18h14a3 3 0 1 0 0-6"/>
+          </svg>
+        </div>
+        <div>
+            <div class="font-medium">Tailwind CSS</div>
+            <div class="text-xs text-slate-500">UI composition & spacing</div>
+        </div>
+        </div>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Familiar</span>
+        <span class="text-slate-400">• design systems</span>
+        </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+        <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-500">
+          <!-- Tailwind CSS Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2">
+            <!-- Frame -->
+            <rect x="3" y="3" width="18" height="18" rx="4" ry="4"/>
+            <!-- Huruf B (Bootstrap style) -->
+            <path d="M9 7h4.5a2.5 2.5 0 0 1 0 5H9z"/>
+            <path d="M9 12h5a2.5 2.5 0 0 1 0 5H9z"/>
+          </svg>
+        </div>
+        <div>
+            <div class="font-medium">Bootstrap</div>
+            <div class="text-xs text-slate-500">UI composition & spacing</div>
+        </div>
+        </div>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• design systems</span>
+        </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+        <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-500">
+          <!-- MySQL Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="7" ry="3"/>
+            <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/>
+            <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>
+          </svg>
+        </div>
+        <div>
+            <div class="font-medium">MySQL</div>
+            <div class="text-xs text-slate-500">Relational data modeling</div>
+        </div>
+        </div>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• indexing & queries</span>
+        </div>
+    </div>
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-600">
+          <!-- Database Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v6c0 1.7 4 3 9 3s9-1.3 9-3V5"/>
+            <path d="M3 11v6c0 1.7 4 3 9 3s9-1.3 9-3v-6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-medium">MongoDB</div>
+          <div class="text-xs text-slate-500">NoSQL data modeling</div>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Familiar</span>
+        <div class="text-xs text-slate-500">• document schema & aggregation</div>
+      </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-600">
+          <!-- Git Branch Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="6" cy="18" r="3"/>
+            <path d="M6 9v6a3 3 0 0 0 3 3h6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-medium">Git</div>
+          <div class="text-xs text-slate-500">Version control & collaboration</div>
+        </div>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• branching & PR workflow</span>
+      </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-600">
+          <!-- Container Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-medium">Docker</div>
+          <div class="text-xs text-slate-500">Containerized environments</div>
+        </div>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• local dev & deployment ready</span>
+      </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-600">
+          <!-- Terminal Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 17l6-6-6-6"/><path d="M12 19h8"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-medium">Linux User</div>
+          <div class="text-xs text-slate-500">CLI & server basics</div>
+        </div>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Proficient</span>
+        <span class="text-slate-400">• SSH, permissions & services</span>
+      </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-600">
+          <!-- Network Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-medium">Basic Internet Networking</div>
+          <div class="text-xs text-slate-500">DNS, IP, routing basics</div>
+        </div>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Familiar</span>
+        <span class="text-slate-400">• local network • troubleshooting</span>
+      </div>
+    </div>
+
+    <div class="group rounded-2xl bg-white/70 backdrop-blur border border-slate-200/60 p-5 transition hover:bg-white">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-slate-200 flex items-center justify-center text-slate-600">
+          <!-- Palette Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/>
+            <circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/>
+            <path d="M12 2a10 10 0 0 0 0 20c1.5 0 2-1 2-2 0-.6-.3-1.1-.7-1.5a1.8 1.8 0 0 1-.3-2.1c.4-.7 1.2-1 2-1h1a4 4 0 0 0 0-8h-1a2 2 0 0 1-2-2c0-.6.2-1.2.6-1.7A2.5 2.5 0 0 0 12 2z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-medium">Basic Graphic Design</div>
+          <div class="text-xs text-slate-500">CorelDraw & Photoshop</div>
+        </div>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-slate-200">Familiar</span>
+        <span class="text-slate-400">• simple assets • UI support</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- GitHub Repos -->
+<section id="repos" class="section bg-slate-50">
+<div class="max-w-7xl mx-auto px-4 reveal">
+    <h2 class="text-2xl font-semibold mb-2">GitHub Repositories</h2>
+    <p class="text-slate-600 mb-8 max-w-2xl">
+    Selected public repositories that reflect my practical approach to web development,
+    clean structure, and maintainable code.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Repo Card -->
+    <a href="https://github.com/alitofan74/busur" target="_blank"
+        class="group rounded-2xl bg-white border border-slate-200 p-5 hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+        <div class="h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="6" cy="18" r="3"/>
+            <path d="M6 9v6a3 3 0 0 0 3 3h6"/>
+          </svg>
+        </div>
+        <div>
+            <h3 class="font-semibold group-hover:underline">Whatsapp Blast</h3>
+            <p class="mt-1 text-sm text-slate-600">
+            Blast message using whatsapp web
+            </p>
+        </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Laravel</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Bootstrap</span>
+        </div>
+    </a>
+
+    <!-- Repo Card -->
+    <a href="https://github.com/alitofan74/lapakreina" target="_blank"
+        class="group rounded-2xl bg-white border border-slate-200 p-5 hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+        <div class="h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="6" cy="18" r="3"/>
+              <path d="M6 9v6a3 3 0 0 0 3 3h6"/>
+            </svg>
+        </div>
+        <div>
+            <h3 class="font-semibold group-hover:underline">Tiktok Gift Record</h3>
+            <p class="mt-1 text-sm text-slate-600">
+            Record gift from tiktok live
+            </p>
+        </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Bootstrap</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Laravel</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">NodeJS</span>
+        </div>
+    </a>
+
+    <!-- Repo Card -->
+    <a href="https://github.com/alitofan74/docker" target="_blank"
+        class="group rounded-2xl bg-white border border-slate-200 p-5 hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+        <div class="h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="6" cy="18" r="3"/>
+              <path d="M6 9v6a3 3 0 0 0 3 3h6"/>
+            </svg>
+        </div>
+        <div>
+            <h3 class="font-semibold group-hover:underline">Dockerized Dev Setup</h3>
+            <p class="mt-1 text-sm text-slate-600">
+            Local development environment using Docker Compose.
+            </p>
+        </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Docker</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Nginx</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">PHP</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">MySQL</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">MongoDB</span>
+        </div>
+    </a>
+
+    <!-- Repo Card -->
+    <a href="https://github.com/alitofan74/docker" target="_blank"
+        class="group rounded-2xl bg-white border border-slate-200 p-5 hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+        <div class="h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="6" cy="18" r="3"/>
+              <path d="M6 9v6a3 3 0 0 0 3 3h6"/>
+            </svg>
+        </div>
+        <div>
+            <h3 class="font-semibold group-hover:underline">WA Service</h3>
+            <p class="mt-1 text-sm text-slate-600">
+            Whatsapp web API.
+            </p>
+        </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">NodeJS</span>
+        </div>
+    </a>
+
+    <!-- Repo Card -->
+    <a href="https://github.com/alitofan74/Inventory-POS" target="_blank"
+        class="group rounded-2xl bg-white border border-slate-200 p-5 hover:shadow-lg transition">
+        <div class="flex items-start gap-3">
+        <div class="h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="6" cy="18" r="3"/>
+              <path d="M6 9v6a3 3 0 0 0 3 3h6"/>
+            </svg>
+        </div>
+        <div>
+            <h3 class="font-semibold group-hover:underline">Inventory & POS Web App</h3>
+            <p class="mt-1 text-sm text-slate-600">
+            Management inventory office and product selling.
+            </p>
+        </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Boostrap</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">Laravel</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">MySQL</span>
+        <span class="px-2 py-0.5 rounded-full border border-slate-200">MongoDB</span>
+        </div>
+    </a>
+    </div>
+</div>
+</section>
+
+<!-- CTA + Contact -->
+<section id="contact" class="py-16 md:py-20 bg-slate-50">
+<div class="max-w-7xl mx-auto px-4 reveal">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div>
+        <h2 class="text-2xl md:text-3xl font-semibold">Open to Collaborations</h2>
+        <p class="mt-3 text-slate-600 max-w-xl">
+        If you’re building a product and need a reliable engineer who cares about quality, scalability, and delivery,
+        I’m happy to contribute. I blend into existing teams and help move projects forward with clean code,
+        thoughtful architecture, and steady execution.
+        </p>
+        <p class="mt-3 text-slate-600 max-w-xl">
+        Loop me into your project when you’re ready to take it further.
+        </p>
+    </div>
+    
+    <!-- Seamless contact links (no card) -->
+    <div class="md:justify-self-end">
+        <div class="flex flex-wrap items-center gap-3">
+        <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-slate-200/70 bg-white/60 backdrop-blur hover:bg-white transition" href="https://www.linkedin.com/in/alitofan74/" target="_blank">🔗 LinkedIn</a>
+        <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-slate-200/70 bg-white/60 backdrop-blur hover:bg-white transition" href="mailto:alitofan30@gmail.com">📧 Email</a>
+        <a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-green-600/90 text-white hover:bg-green-700 transition" href="https://wa.me/6285156890183" target="_blank">💬 WhatsApp</a>
+        </div>
+        <p class="mt-4 text-xs text-slate-500">Available for short-term collaboration or long-term engagement.</p>
+    </div>
+    </div>
+</div>
+</section>
+
+<footer class="py-8 text-center text-sm text-slate-500">© 2026 M. Ali Tofan</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+
+    if (mobileMenu.classList.contains('max-h-0')) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-96');
+    } else {
+      mobileMenu.classList.add('max-h-0');
+      mobileMenu.classList.remove('max-h-96');
+    }
+  });
+
+  // Auto close when click menu
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('max-h-0');
+      mobileMenu.classList.remove('max-h-96');
+      menuBtn.classList.remove('active');
+    });
+  });
+</script>
+
+
+<script>
+  // Reveal on scroll (play once when entering view)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll with offset for fixed navbar
+  const NAV_OFFSET = document.querySelector('header')?.offsetHeight || 72;
+
+  function replayRevealIn(target) {
+    const nodes = target.querySelectorAll('.reveal');
+    nodes.forEach(el => {
+      el.classList.remove('show');
+      // force reflow so animation can replay
+      void el.offsetWidth;
+      el.classList.add('show');
+    });
+  }
+
+  function scrollWithOffset(targetId) {
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
+    const y = target.getBoundingClientRect().top + window.pageYOffset - NAV_OFFSET - 8;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    // replay animation shortly after scroll starts (safe for repeated clicks)
+    setTimeout(() => replayRevealIn(target), 180);
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      e.preventDefault();
+      scrollWithOffset(id);
+    });
+  });
+
+  // Navbar dark & translucent on scroll / section change
+  const navbar = document.getElementById('navbar');
+  const navLinks = navbar.querySelectorAll('a');
+
+  function updateNavbarStyle() {
+    const scrolled = window.scrollY > 40;
+    if (scrolled) {
+      navbar.classList.remove('bg-white/80', 'border-b');
+      navbar.classList.add('bg-slate-900/70', 'text-white', 'border-white/10');
+      navLinks.forEach(a => {
+        a.classList.remove('hover:text-blue-600');
+        a.classList.add('hover:text-sky-400');
+      });
+    } else {
+      navbar.classList.add('bg-white/80', 'border-b');
+      navbar.classList.remove('bg-slate-900/70', 'text-white', 'border-white/10');
+      navLinks.forEach(a => {
+        a.classList.add('hover:text-blue-600');
+        a.classList.remove('hover:text-sky-400');
+      });
+    }
+  }
+
+  updateNavbarStyle();
+  window.addEventListener('scroll', updateNavbarStyle, { passive: true });
+</script>
+</body>
+</html>
